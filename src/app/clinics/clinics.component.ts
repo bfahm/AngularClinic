@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ADD_CLINIC_ROUTE } from '../app-routing.module';
 import { Clinic } from './clinic.model';
 import { ClinicsService } from './clinics.service';
 
@@ -10,10 +12,14 @@ import { ClinicsService } from './clinics.service';
 export class ClinicsComponent implements OnInit {
   clinics: Clinic[] = [];
 
-  constructor(private clinicsService: ClinicsService) {}
+  constructor(private router: Router, private clinicsService: ClinicsService) {}
 
   ngOnInit() {
     this.clinics = this.clinicsService.clinics;
     console.log(this.clinics);
+  }
+
+  goToAddClinic(){
+    this.router.navigate([`/${ADD_CLINIC_ROUTE}`]);
   }
 }

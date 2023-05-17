@@ -1,0 +1,5 @@
+<form (ngSubmit)="addClinic(newClinicName, newClinicAddress);">
+    <input type="text" [(ngModel)]="newClinicName" placeholder="Clinic Name" name="name">
+    <input type="text" [(ngModel)]="newClinicAddress" placeholder="Clinic Address" name="address">
+    <button type="submit">Add Clinic</button>
+</form>

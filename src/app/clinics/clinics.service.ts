@@ -14,4 +14,14 @@ export class ClinicsService {
     new Clinic(5, 'Urgent Care', '1111 Pine St', [demoDoctor3])
 ];
   constructor() { }
+
+  generateId(): number{
+    const ids = this.clinics.flatMap(c => c.id);
+    const maxId = Math.max(...ids);
+    return maxId + 1;
+  }
+
+  addClinic(clinic: Clinic){
+    this.clinics.push(clinic);
+  }
 }
