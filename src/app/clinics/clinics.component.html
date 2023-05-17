@@ -1,0 +1,9 @@
+<p>Clinics</p>
+
+<div *ngFor="let clinic of clinics">
+    <h2>{{ clinic.name }}</h2>
+    <p>{{ clinic.address }}</p>
+    <ul>
+      <li *ngFor="let doctor of clinic.doctors">{{ doctor.name }}</li>
+    </ul>
+</div>
