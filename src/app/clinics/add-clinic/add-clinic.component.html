@@ -1,5 +1,23 @@
+<h3>Add Clinic</h3>
+
 <form (ngSubmit)="addClinic(newClinicName, newClinicAddress);">
-    <input type="text" [(ngModel)]="newClinicName" placeholder="Clinic Name" name="name">
-    <input type="text" [(ngModel)]="newClinicAddress" placeholder="Clinic Address" name="address">
-    <button type="submit">Add Clinic</button>
-</form>
+    <div class="form-group">
+      <label for="clinicName">Clinic Name</label>
+      <input class="form-control" id="clinicName" aria-describedby="emailHelp" type="text" [(ngModel)]="newClinicName" placeholder="Clinic Name" name="name">
+      <small class="form-text text-muted">Think of a unique one.</small>
+    </div>
+    
+    <div class="form-group">
+        <label for="clinicAddress">Clinic Address</label>
+        <input class="form-control" id="clinicAddress" aria-describedby="emailHelp" type="text" [(ngModel)]="newClinicAddress" placeholder="Clinic Address" name="name">
+        <small class="form-text text-muted">The address of your clinic.</small>
+      </div>
+    
+    <br/>
+    <br/>
+    <button class="btn btn-dark" type="submit">Add Clinic</button>
+
+    <br/>
+    <br/>
+  </form>
+  
