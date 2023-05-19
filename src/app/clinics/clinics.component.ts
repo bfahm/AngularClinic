@@ -21,8 +21,4 @@ export class ClinicsComponent implements OnInit {
   goToAddClinic(){
     this.router.navigate([`/${ADD_CLINIC_ROUTE}`]);
   }
-  
-  goToDoctors(){
-    this.router.navigate([`/${DOCTORS_ROUTE}`]);
-  }
 }
