@@ -10,8 +10,8 @@ import { ClinicsService } from '../../../services/clinics.service';
 })
 export class AddClinicComponent {
   
-  newClinicName: string = "test";
-  newClinicAddress: string = "test";
+  newClinicName: string = "";
+  newClinicAddress: string = "";
 
   constructor(private router: Router, private clinicsService: ClinicsService) {}
 
