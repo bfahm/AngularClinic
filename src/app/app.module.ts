@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { PatientViewComponent } from './patient-view/patient-view.component';
+import { DoctorViewComponent } from './doctor-view/doctor-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    PatientViewComponent,
+    DoctorViewComponent
   ],
   imports: [
     BrowserModule,

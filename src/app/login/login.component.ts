@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { UserType } from '../models/user.model';
-import { CLINICS_ROUTE, DOCTORS_ROUTE, PATIENTS_ROUTE } from '../app-routing.module';
+import { CLINICS_ROUTE, DOCTORS_ROUTE, DOCTOR_VIEW_ROUTE, PATIENTS_ROUTE, PATIENT_VIEW_ROUTE } from '../app-routing.module';
 import { Router } from '@angular/router';
 
 @Component({
@@ -30,10 +30,10 @@ export class LoginComponent {
           this.router.navigate([`/${CLINICS_ROUTE}`]);
           break;
           case UserType.Patient:
-            this.router.navigate([`/${PATIENTS_ROUTE}`]);
+            this.router.navigate([`/${PATIENT_VIEW_ROUTE}`]);
             break;
           case UserType.Doctor:
-            this.router.navigate([`/${DOCTORS_ROUTE}`]);
+            this.router.navigate([`/${DOCTOR_VIEW_ROUTE}`]);
             break;
       }
     });
