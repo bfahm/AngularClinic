@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
+import { UserType } from '../models/user.model';
 
 @Component({
   selector: 'app-nav',
@@ -8,6 +9,7 @@ import { UserService } from '../user.service';
 export class NavComponent {
   currentUsername: string = "";
   isAuthenticated = false;
+  isAdmin = false;
 
   ngOnInit(): void {
     this.userService.currentUsername.subscribe(v => {
@@ -17,9 +19,17 @@ export class NavComponent {
     this.userService.currentUserType.subscribe(v => {
       this.isAuthenticated = UserService.isAuthenticated(v);
     });
+
+    this.userService.currentUserType.subscribe(v => {
+      this.isAdmin = v == UserType.Admin;
+    });
   }
 
   constructor(private readonly userService: UserService){
     
+  }
+
+  handleLogout() {
+    this.userService.logout();
   }
 }

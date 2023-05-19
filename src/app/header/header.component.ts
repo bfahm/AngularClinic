@@ -23,6 +23,9 @@ export class HeaderComponent implements OnInit  {
         case UserType.Patient:
           this.setHeaderForPatient();
           break;
+        default:
+          this.setHeaderForUnauthorized();
+          break;
       }
     });
   }
@@ -44,5 +47,10 @@ export class HeaderComponent implements OnInit  {
   private setHeaderForAdmin(){
     this.title = "Admin View";
     this.subTitle = "This view is only available for admin."
+  }
+
+  private setHeaderForUnauthorized(){
+    this.title = "Welcome back!";
+    this.subTitle = "Login to Proceed.."
   }
 }

@@ -31,6 +31,11 @@ export class UserService {
     return true;
   }
 
+  logout(){
+    this.currentUserType.next(UserType.Unauthenticated);
+    this.currentUsername.next("");
+  }
+
   static isAuthenticated(currentUserType: UserType): boolean{
     return currentUserType != UserType.Unauthenticated;
   }
