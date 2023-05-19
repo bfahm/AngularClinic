@@ -10,6 +10,7 @@ export class NavComponent {
   currentUsername: string = "";
   isAuthenticated = false;
   isAdmin = false;
+  isPatient = false;
 
   ngOnInit(): void {
     this.userService.currentUsername.subscribe(v => {
@@ -22,6 +23,7 @@ export class NavComponent {
 
     this.userService.currentUserType.subscribe(v => {
       this.isAdmin = v == UserType.Admin;
+      this.isPatient = v == UserType.Patient;
     });
   }
 

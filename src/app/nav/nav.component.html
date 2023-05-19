@@ -4,11 +4,11 @@
         <a class="navbar-brand" href="#!">Angular Clinic</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <ul *ngIf="isAdmin">
-                    <li class="nav-item"><a class="nav-link" routerLink="/clinics">Clinics</a></li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/doctors">Doctors</a></li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/patients">Patients</a></li>
+            <div class="me-auto mb-2 mb-lg-0 ms-lg-4">
+                <ul class="navbar-nav">
+                    <li *ngIf="isAdmin || isPatient" class="nav-item"><a class="nav-link" routerLink="/clinics">Clinics</a></li>
+                    <li *ngIf="isAdmin" class="nav-item"><a class="nav-link" routerLink="/doctors">Doctors</a></li>
+                    <li *ngIf="isAdmin" class="nav-item"><a class="nav-link" routerLink="/patients">Patients</a></li>
                 </ul>
             </div>
             <div class="btn-group" *ngIf="isAuthenticated">
