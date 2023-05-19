@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, forwardRef } from '@angular/core';
 import { Doctor } from './doctor.model';
+import { ClinicsService } from '../clinics/clinics.service';
 
 // Demo data for testing
 export const demoDoctor1 = new Doctor(1, 'Dr. Smith');
@@ -15,8 +16,12 @@ export class DoctorsService {
     demoDoctor1,
     demoDoctor2,
     demoDoctor3
-];
-  constructor() { }
+  ];
+
+  constructor(@Inject((forwardRef(() => ClinicsService))) private clinicsService: ClinicsService) 
+  {
+    this.doctors.forEach(d => d.assignedClinic = this.clinicsService.getDoctorClinc(d));
+  }
 
   generateId(): number{
     const ids = this.doctors.flatMap(d => d.id);
@@ -26,5 +31,9 @@ export class DoctorsService {
 
   addDoctor(doctor: Doctor){
     this.doctors.push(doctor);
+  }
+
+  getById(id: number): Doctor | undefined {
+    return this.doctors.find(d => d.id === id);
   }
 }

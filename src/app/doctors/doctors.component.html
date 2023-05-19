@@ -2,6 +2,7 @@
 
 <div *ngFor="let doctor of doctors">
     <h2>{{ doctor.name }}</h2>
+    <p>{{ doctor.assignedClinic?.name }}</p>
 </div>
 
 <button (click)="goToAddDoctor()">Add Doctor</button>
