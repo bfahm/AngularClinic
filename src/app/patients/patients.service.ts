@@ -3,6 +3,7 @@ import { Patient } from '../models/patient.model';
 import { Doctor } from '../models/doctor.model';
 import { Appointment } from '../models/appointment.model';
 import { demoDoctor1, demoDoctor2, demoDoctor3 } from '../doctors/doctors.service';
+import { UserService } from '../user.service';
 
 export const demoPatient = new Patient(1, 'Jack', 'jack', 'Test@123');
 export const demoPatient2 = new Patient(2, 'Jack', 'jack2', 'Test@123');
@@ -23,7 +24,7 @@ export class PatientsService {
     new Appointment(demoPatient2, demoDoctor3, new Date()),
   ];
 
-  constructor() { }
+  constructor(private readonly userService: UserService) { }
 
   generateId(): number{
     const ids = this.patients.flatMap(d => d.id);
@@ -37,6 +38,10 @@ export class PatientsService {
 
   getById(id: number): Patient | undefined {
     return this.patients.find(d => d.id == id);
+  }
+
+  getCurrentPatient(): Patient | undefined {
+    return this.patients.find(d => d.id == this.userService.currentUserId.value);
   }
 
   createAnAppointment(patient: Patient, doctor: Doctor, date: Date) {

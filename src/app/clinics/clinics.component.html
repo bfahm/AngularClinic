@@ -14,10 +14,14 @@
                   </div>
               </div>
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                  <div class="text-center" *ngIf="clinic.doctors.length > 0">
+                  <div class="" *ngIf="clinic.doctors.length > 0">
                     <h6>List of Doctors</h6>
                     <ul class="list-group">
-                      <li class="list-group-item" *ngFor="let doctor of clinic.doctors">{{ doctor.name }}</li>
+                      <li class="list-group-item d-flex justify-content-between" *ngFor="let doctor of clinic.doctors">
+                        <span class="text-nowrap">{{ doctor.name }}</span>
+                        <span class="w-100"></span>
+                        <button (click)="reserveDoctor(doctor);" type="button" class="btn btn-sm btn-success">Reserve</button>
+                      </li>
                     </ul>
                   </div>
               </div>
