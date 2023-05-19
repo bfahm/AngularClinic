@@ -27,7 +27,7 @@ export class ClinicsService {
   }
 
   getById(id: number): Clinic | undefined {
-    return this.clinics.find(c => c.id === id);
+    return this.clinics.find(c => c.id == id);
   }
 
   getByDoctorId(id: number): Clinic | undefined {
@@ -41,10 +41,10 @@ export class ClinicsService {
     }
   }
 
-  getDoctorClinc(doctor: Doctor): Clinic | null {
+  getDoctorClinc(doctor: Doctor): Clinic | undefined{
     var clinic = this.getByDoctorId(doctor.id);
     if(!clinic){
-      return null;
+      return undefined;
     }
 
     return clinic;

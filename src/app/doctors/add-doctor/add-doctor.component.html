@@ -1,4 +1,7 @@
 <form (ngSubmit)="addDoctor(newDoctorName);">
     <input type="text" [(ngModel)]="newDoctorName" placeholder="Doctor Name" name="name">
+    <select [(ngModel)]="selectedClinicId" name="clinics">
+        <option *ngFor="let option of clinics" [value]="option.id">{{ option.name }}</option>
+    </select>
     <button type="submit">Add Clinic</button>
 </form>

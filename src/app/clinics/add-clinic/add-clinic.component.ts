@@ -6,8 +6,7 @@ import { ClinicsService } from '../clinics.service';
 
 @Component({
   selector: 'app-add-clinic',
-  templateUrl: './add-clinic.component.html',
-  styleUrls: ['./add-clinic.component.css']
+  templateUrl: './add-clinic.component.html'
 })
 export class AddClinicComponent {
   
