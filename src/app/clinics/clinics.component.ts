@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ADD_CLINIC_ROUTE } from '../app-routing.module';
+import { ADD_CLINIC_ROUTE, DOCTORS_ROUTE } from '../app-routing.module';
 import { Clinic } from './clinic.model';
 import { ClinicsService } from './clinics.service';
 
@@ -21,5 +21,9 @@ export class ClinicsComponent implements OnInit {
 
   goToAddClinic(){
     this.router.navigate([`/${ADD_CLINIC_ROUTE}`]);
+  }
+  
+  goToDoctors(){
+    this.router.navigate([`/${DOCTORS_ROUTE}`]);
   }
 }

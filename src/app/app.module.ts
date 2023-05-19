@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClinicsModule } from './clinics/clinics.module';
+import { DoctorsModule } from './doctors/doctors.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { ClinicsModule } from './clinics/clinics.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    DoctorsModule,
     ClinicsModule,
   ],
   providers: [],
