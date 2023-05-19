@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClinicsModule } from './clinics/clinics.module';
 import { DoctorsModule } from './doctors/doctors.module';
+import { PatientsModule } from './patients/patients.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DoctorsModule } from './doctors/doctors.module';
     AppRoutingModule,
     DoctorsModule,
     ClinicsModule,
+    PatientsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

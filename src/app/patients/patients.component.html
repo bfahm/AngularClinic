@@ -1,0 +1,7 @@
+<p>Patients</p>
+
+<div *ngFor="let patient of patients">
+    <h2>{{ patient.name }}</h2>
+</div>
+
+<button (click)="goToRegisterPatient()">Register Patient</button>
