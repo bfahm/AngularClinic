@@ -28,7 +28,7 @@ export class UserService {
 
     this.currentUsername.next(existingUser.username);
     this.currentUserType.next(existingUser.userType);
-    this.currentUserType.next(existingUser.id);
+    this.currentUserId.next(existingUser.id);
 
     return true;
   }
@@ -37,6 +37,10 @@ export class UserService {
     this.currentUserType.next(UserType.Unauthenticated);
     this.currentUsername.next("");
     this.currentUserId.next(-1);
+  }
+
+  addUser(user: User){
+    this.users.push(user);
   }
 
   static isAuthenticated(currentUserType: UserType): boolean{

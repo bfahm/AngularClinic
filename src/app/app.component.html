@@ -3,7 +3,7 @@
 
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
-        <app-login *ngIf="!isAuthenticated"></app-login>
+        <app-register-or-login *ngIf="!isAuthenticated"></app-register-or-login>
         <router-outlet *ngIf="isAuthenticated"></router-outlet>
     </div>
   </section>

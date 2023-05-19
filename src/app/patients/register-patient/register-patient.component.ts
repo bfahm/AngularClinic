@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { DOCTORS_ROUTE, PATIENTS_ROUTE } from 'src/app/app-routing.module';
+import { PATIENTS_ROUTE } from 'src/app/app-routing.module';
 import { Patient } from '../../models/patient.model';
 import { PatientsService } from '../patients.service';
+import { User, UserType } from 'src/app/models/user.model';
+import { UserService } from 'src/app/user.service';
 
 @Component({
   selector: 'app-register-patient',
@@ -11,14 +13,17 @@ import { PatientsService } from '../patients.service';
 export class RegisterPatientComponent {
   
   @Input()
-  newPatientName: string = "test";
+  newPatientName: string = "";
   @Input()
-  newPatientUsername: string = "test";
+  newPatientUsername: string = "";
   @Input()
-  newPatientPassword: string = "test";
+  newPatientPassword: string = "";
+
+  @Output() toggleRegister = new EventEmitter<boolean>(true);
   
   constructor(private router: Router, 
-    private patientsService: PatientsService) 
+    private patientsService: PatientsService,  
+    private userService: UserService, ) 
     {}
 
   addPatient(): void {
@@ -27,7 +32,12 @@ export class RegisterPatientComponent {
 
     this.patientsService.addPatient(newPatient);
     
-    this.router.navigate([`/${PATIENTS_ROUTE}`]);
+    if(this.userService.currentUserType.value == UserType.Unauthenticated){
+      this.toggleRegister.emit(false);
+      this.router.navigate([`/`]);
+    }else{
+      this.router.navigate([`/${PATIENTS_ROUTE}`]);
+    }
   }
 
 }

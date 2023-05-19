@@ -4,6 +4,7 @@ import { Doctor } from '../models/doctor.model';
 import { Appointment } from '../models/appointment.model';
 import { demoDoctor1, demoDoctor2, demoDoctor3 } from '../doctors/doctors.service';
 import { UserService } from '../user.service';
+import { User, UserType } from '../models/user.model';
 
 export const demoPatient = new Patient(1, 'Jack', 'jack', 'Test@123');
 export const demoPatient2 = new Patient(2, 'Jack', 'jack2', 'Test@123');
@@ -34,6 +35,8 @@ export class PatientsService {
 
   addPatient(patient: Patient){
     this.patients.push(patient);
+    const user = new User(patient.id, patient.username, patient.password, UserType.Patient);
+    this.userService.addUser(user);
   }
 
   getById(id: number): Patient | undefined {

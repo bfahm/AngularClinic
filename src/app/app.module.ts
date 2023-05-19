@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { PatientViewComponent } from './patient-view/patient-view.component';
 import { DoctorViewComponent } from './doctor-view/doctor-view.component';
+import { RegisterOrLoginComponent } from './register-or-login/register-or-login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DoctorViewComponent } from './doctor-view/doctor-view.component';
     FooterComponent,
     LoginComponent,
     PatientViewComponent,
-    DoctorViewComponent
+    DoctorViewComponent,
+    RegisterOrLoginComponent
   ],
   imports: [
     BrowserModule,

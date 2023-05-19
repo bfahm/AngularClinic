@@ -1,0 +1,9 @@
+<div *ngIf="!isRegister">
+    <app-login ></app-login>
+    <p><a (click)="toggleRegister(true)" class="link-opacity-100" href="#">Don't have an account? Register instead.</a></p>
+</div>
+
+<div *ngIf="isRegister">
+    <app-register-patient (toggleRegister)="toggleRegister($event)"></app-register-patient>
+    <p><a (click)="toggleRegister(true)" class="link-opacity-100" href="#">Already have an account? Login instead.</a></p>
+</div>
