@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { User, UserType } from '../models/user.model';
 import { BehaviorSubject } from 'rxjs';
+import { demoDoctor1, demoDoctor3 } from './doctors.service';
+import { demoPatient2 } from './patients.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +11,8 @@ import { BehaviorSubject } from 'rxjs';
 export class UserService {
   users: User[] = [
     new User(1, "admin", "admin", UserType.Admin),
-    new User(2, "testPatient", "Test@123", UserType.Patient),
-    new User(3, "testDoctor", "Test@123", UserType.Doctor),
+    new User(2, demoPatient2.username, demoPatient2.password, UserType.Patient),
+    new User(3, demoDoctor3.username, demoDoctor3.password, UserType.Doctor),
   ];
 
   constructor() { }

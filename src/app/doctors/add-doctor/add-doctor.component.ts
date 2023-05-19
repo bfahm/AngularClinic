@@ -12,7 +12,9 @@ import { Clinic } from 'src/models/clinic.model';
 })
 export class AddDoctorComponent {
   
-  newDoctorName: string = "test";
+  newDoctorName: string = "";
+  newDoctorUsername: string = "";
+  newDoctorPassword: string = "";
   clinics: Clinic[] = [];
   selectedClinicId: number | null = null;
 
@@ -25,9 +27,9 @@ export class AddDoctorComponent {
     this.clinics = this.clinicsService.clinics;
   }  
 
-  addDoctor(name: string): void {
+  addDoctor(): void {
     const id = this.doctorsService.generateId();
-    const newDoctor = new Doctor(id, name);
+    const newDoctor = new Doctor(id, this.newDoctorName, this.newDoctorUsername, this.newDoctorPassword);
 
     this.doctorsService.addDoctor(newDoctor);
     

@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 import { User, UserType } from '../models/user.model';
 
 export const demoPatient = new Patient(1, 'Jack', 'jack', 'Test@123');
-export const demoPatient2 = new Patient(2, 'Jack', 'jack2', 'Test@123');
+export const demoPatient2 = new Patient(2, 'Joseph', 'jo', 'Test@123');
 
 @Injectable({
   providedIn: 'root'
