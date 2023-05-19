@@ -1,8 +1,30 @@
-<p>Doctors</p>
-
-<div *ngFor="let doctor of doctors">
-    <h2>{{ doctor.name }}</h2>
-    <p>{{ doctor.assignedClinic?.name }}</p>
-</div>
-
-<button (click)="goToAddDoctor()">Add Doctor</button>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+      <div class="row gx-4 gx-lg-5 row-cols-12 row-cols-md-12 row-cols-xl-12 justify-content-center">
+        <button type="button" class="btn btn-dark btn-lg btn-block" (click)="goToAddDoctor()">Add Doctor</button>
+      </div>
+      <br>
+      <br>
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="col mb-5" *ngFor="let doctor of doctors">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">{{ doctor.name }}</h5>
+                            {{ doctor.assignedClinic?.name }}
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center" *ngIf="doctor.assignedClinic != null">
+                          <h6>Clinic</h6>
+                          <ul class="list-group">
+                            <li class="list-group-item" >{{ doctor.assignedClinic.name }}</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
