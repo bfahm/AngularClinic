@@ -1,6 +1,6 @@
 <h3>Add Clinic</h3>
 
-<form (ngSubmit)="addClinic(newClinicName, newClinicAddress);">
+<form (ngSubmit)="addClinic(newClinicName, newClinicAddress);" class="col-6">
     <div class="form-group">
       <label for="clinicName">Clinic Name</label>
       <input class="form-control" id="clinicName" aria-describedby="emailHelp" type="text" [(ngModel)]="newClinicName" placeholder="Clinic Name" name="name">

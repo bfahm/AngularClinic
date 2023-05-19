@@ -1,15 +1,16 @@
 <h3>Login!</h3>
 
-<form (ngSubmit)="login();">
+<form (ngSubmit)="login();" class="col-6">
     <div class="form-group">
       <input class="form-control" id="patientName" aria-describedby="emailHelp" type="text" [(ngModel)]="username" placeholder="Username" name="name">
     </div>
-
+    <br/>
+    
     <div class="form-group">
-        <input class="form-control" id="userName" aria-describedby="emailHelp" type="password" [(ngModel)]="password" placeholder="Password" name="name">
+      <input class="form-control" id="userName" aria-describedby="emailHelp" type="password" [(ngModel)]="password" placeholder="Password" name="name">
     </div>
-
-      
+    
+    
     <br/>
     <br/>
     
