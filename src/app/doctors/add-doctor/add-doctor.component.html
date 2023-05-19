@@ -7,22 +7,26 @@
       <small class="form-text text-muted">The name of the doctor.</small>
     </div>
 
+    <br/>
+    
     <div class="form-group">
       <label for="doctorName">Doctor Username</label>
       <input class="form-control" id="doctorName" aria-describedby="emailHelp" type="text" [(ngModel)]="newDoctorUsername" placeholder="Doctor Username" name="name">
       <small class="form-text text-muted">The username of the doctor.</small>
     </div>
-
+    
     <div class="form-group">
       <label for="doctorName">Doctor Password</label>
       <input class="form-control" id="doctorName" aria-describedby="emailHelp" type="text" [(ngModel)]="newDoctorPassword" placeholder="Doctor Password" name="name">
       <small class="form-text text-muted">The password of the doctor.</small>
     </div>
     
+    <br/>
+
     <select class="form-control form-control" [(ngModel)]="selectedClinicId" name="clinics">
-        
-        <option *ngFor="let option of clinics" [value]="option.id">{{ option.name }}</option>
+      <option *ngFor="let option of clinics" [value]="option.id">{{ option.name }}</option>
     </select>
+    <small class="form-text text-muted">Select a clinic.</small>
     
     <br/>
     <br/>
