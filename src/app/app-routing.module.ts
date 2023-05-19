@@ -6,9 +6,9 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { AddDoctorComponent } from './doctors/add-doctor/add-doctor.component';
 import { PatientsComponent } from './patients/patients.component';
 import { RegisterPatientComponent } from './patients/register-patient/register-patient.component';
-import { DoctorViewComponent } from './doctor-view/doctor-view.component';
-import { PatientViewComponent } from './patient-view/patient-view.component';
-import { LoginComponent } from './login/login.component';
+import { DoctorViewComponent } from './doctors/doctor-view/doctor-view.component';
+import { PatientViewComponent } from './patients/patient-view/patient-view.component';
+import { LoginComponent } from './shared/login/login.component';
 
 export const CLINICS_ROUTE = 'clinics';
 export const ADD_CLINIC_ROUTE = 'add-clinic';

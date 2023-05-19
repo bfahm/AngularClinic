@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Appointment } from '../models/appointment.model';
-import { UserService } from '../user.service';
-import { DoctorsService } from '../doctors/doctors.service';
-import { PatientsService } from '../patients/patients.service';
-import { Doctor } from '../models/doctor.model';
+import { Appointment } from '../../../models/appointment.model';
+import { UserService } from '../../../services/user.service';
+import { DoctorsService } from '../../../services/doctors.service';
+import { PatientsService } from '../../../services/patients.service';
+import { Doctor } from '../../../models/doctor.model';
 
 @Component({
   selector: 'app-doctor-view',

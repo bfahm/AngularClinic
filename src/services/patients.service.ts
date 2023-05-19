@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Patient } from '../models/patient.model';
 import { Doctor } from '../models/doctor.model';
 import { Appointment } from '../models/appointment.model';
-import { demoDoctor1, demoDoctor2, demoDoctor3 } from '../doctors/doctors.service';
-import { UserService } from '../user.service';
+import { demoDoctor1, demoDoctor2, demoDoctor3 } from './doctors.service';
+import { UserService } from './user.service';
 import { User, UserType } from '../models/user.model';
 
 export const demoPatient = new Patient(1, 'Jack', 'jack', 'Test@123');

@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { PATIENTS_ROUTE } from 'src/app/app-routing.module';
-import { Patient } from '../../models/patient.model';
-import { PatientsService } from '../patients.service';
-import { User, UserType } from 'src/app/models/user.model';
-import { UserService } from 'src/app/user.service';
+import { Patient } from '../../../models/patient.model';
+import { PatientsService } from '../../../services/patients.service';
+import { User, UserType } from 'src/models/user.model';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-register-patient',

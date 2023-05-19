@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DoctorsComponent } from './doctors.component';
 import { FormsModule } from '@angular/forms';
-import { DoctorsService } from './doctors.service';
+import { DoctorsService } from '../../services/doctors.service';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 
 @NgModule({

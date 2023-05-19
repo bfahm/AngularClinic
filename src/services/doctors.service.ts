@@ -1,6 +1,6 @@
 import { Inject, Injectable, forwardRef } from '@angular/core';
 import { Doctor } from '../models/doctor.model';
-import { ClinicsService } from '../clinics/clinics.service';
+import { ClinicsService } from './clinics.service';
 
 // Demo data for testing
 export const demoDoctor1 = new Doctor(1, 'Dr. Smith');

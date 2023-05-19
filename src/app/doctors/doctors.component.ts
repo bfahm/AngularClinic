@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ADD_DOCTORS_ROUTE } from '../app-routing.module';
-import { DoctorsService } from './doctors.service';
-import { Doctor } from '../models/doctor.model';
+import { DoctorsService } from '../../services/doctors.service';
+import { Doctor } from '../../models/doctor.model';
 
 @Component({
   selector: 'app-doctors',

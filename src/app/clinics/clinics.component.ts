@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ADD_CLINIC_ROUTE, DOCTORS_ROUTE, PATIENT_VIEW_ROUTE } from '../app-routing.module';
-import { Clinic } from '../models/clinic.model';
-import { ClinicsService } from './clinics.service';
-import { UserService } from '../user.service';
-import { UserType } from '../models/user.model';
-import { PatientsService } from '../patients/patients.service';
-import { Doctor } from '../models/doctor.model';
+import { Clinic } from '../../models/clinic.model';
+import { ClinicsService } from '../../services/clinics.service';
+import { UserService } from '../../services/user.service';
+import { UserType } from '../../models/user.model';
+import { PatientsService } from '../../services/patients.service';
+import { Doctor } from '../../models/doctor.model';
 
 @Component({
   selector: 'app-clinics',

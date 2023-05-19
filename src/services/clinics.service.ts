@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Clinic } from '../models/clinic.model';
-import { DoctorsService, demoDoctor1, demoDoctor2, demoDoctor3 } from '../doctors/doctors.service';
+import { DoctorsService, demoDoctor1, demoDoctor2, demoDoctor3 } from './doctors.service';
 import { Doctor } from '../models/doctor.model';
 
 @Injectable({

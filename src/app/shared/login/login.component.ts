@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { UserService } from '../user.service';
-import { UserType } from '../models/user.model';
-import { CLINICS_ROUTE, DOCTORS_ROUTE, DOCTOR_VIEW_ROUTE, PATIENTS_ROUTE, PATIENT_VIEW_ROUTE } from '../app-routing.module';
+import { UserService } from '../../../services/user.service';
+import { UserType } from '../../../models/user.model';
+import { CLINICS_ROUTE, DOCTORS_ROUTE, DOCTOR_VIEW_ROUTE, PATIENTS_ROUTE, PATIENT_VIEW_ROUTE } from '../../app-routing.module';
 import { Router } from '@angular/router';
 
 @Component({

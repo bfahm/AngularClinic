@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { UserService } from '../user.service';
-import { Appointment } from '../models/appointment.model';
-import { Patient } from '../models/patient.model';
-import { PatientsService } from '../patients/patients.service';
+import { UserService } from '../../../services/user.service';
+import { Appointment } from '../../../models/appointment.model';
+import { Patient } from '../../../models/patient.model';
+import { PatientsService } from '../../../services/patients.service';
 
 @Component({
   selector: 'app-patient-view',
