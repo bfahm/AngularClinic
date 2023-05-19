@@ -20,7 +20,7 @@
                       <li class="list-group-item d-flex justify-content-between" *ngFor="let doctor of clinic.doctors">
                         <span class="text-nowrap">{{ doctor.name }}</span>
                         <span class="w-100"></span>
-                        <button (click)="reserveDoctor(doctor);" type="button" class="btn btn-sm btn-success">Reserve</button>
+                        <button *ngIf="isPatient" (click)="reserveDoctor(doctor);" type="button" class="btn btn-sm btn-success">Reserve</button>
                       </li>
                     </ul>
                   </div>

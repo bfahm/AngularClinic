@@ -15,6 +15,7 @@ import { Doctor } from '../../models/doctor.model';
 export class ClinicsComponent implements OnInit {
   clinics: Clinic[] = [];
   isAdmin = false;
+  isPatient = false;
 
   constructor(private router: Router, private clinicsService: ClinicsService, private userService: UserService, private patientsService: PatientsService) {}
 
@@ -24,6 +25,7 @@ export class ClinicsComponent implements OnInit {
     this.userService.currentUserType.subscribe(v => 
     {
       this.isAdmin = v == UserType.Admin;
+      this.isPatient = v == UserType.Patient;
     });
   }
 
