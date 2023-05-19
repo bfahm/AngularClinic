@@ -23,16 +23,19 @@ export class LoginComponent {
       return;
     }
 
-    switch(this.userService.currentUserType){
-      case UserType.Admin:
-        this.router.navigate([`/${CLINICS_ROUTE}`]);
-        break;
-        case UserType.Patient:
-          this.router.navigate([`/${PATIENTS_ROUTE}`]);
+    this.userService.currentUserType.subscribe(v => 
+    {
+      switch(v){
+        case UserType.Admin:
+          this.router.navigate([`/${CLINICS_ROUTE}`]);
           break;
-        case UserType.Doctor:
-          this.router.navigate([`/${DOCTORS_ROUTE}`]);
-          break;
-    }
+          case UserType.Patient:
+            this.router.navigate([`/${PATIENTS_ROUTE}`]);
+            break;
+          case UserType.Doctor:
+            this.router.navigate([`/${DOCTORS_ROUTE}`]);
+            break;
+      }
+    });
   }
 }

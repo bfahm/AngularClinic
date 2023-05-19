@@ -7,9 +7,16 @@ import { UserService } from '../user.service';
 })
 export class NavComponent {
   currentUsername: string = "";
+  isAuthenticated = false;
 
   ngOnInit(): void {
-    this.currentUsername = this.userService.currentUsername;
+    this.userService.currentUsername.subscribe(v => {
+      this.currentUsername = v;
+    });
+
+    this.userService.currentUserType.subscribe(v => {
+      this.isAuthenticated = UserService.isAuthenticated(v);
+    });
   }
 
   constructor(private readonly userService: UserService){

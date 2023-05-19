@@ -7,21 +7,24 @@ import { UserType } from '../models/user.model';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit  {
-  title: string = "test";
-  subTitle: string = "test";
+  title: string = "";
+  subTitle: string = "";
 
   ngOnInit(): void {
-    switch(this.userService.currentUserType){
-      case UserType.Admin:
-        this.setHeaderForAdmin();
-        break;
-      case UserType.Doctor:
-        this.setHeaderForDoctor();
-        break;
+    this.userService.currentUserType.subscribe(v => 
+    {
+      switch(v){
+        case UserType.Admin:
+          this.setHeaderForAdmin();
+          break;
+        case UserType.Doctor:
+          this.setHeaderForDoctor();
+          break;
         case UserType.Patient:
           this.setHeaderForPatient();
           break;
-    }
+      }
+    });
   }
 
   constructor(private readonly userService: UserService){

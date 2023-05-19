@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User, UserType } from './models/user.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,23 +15,24 @@ export class UserService {
 
   constructor() { }
 
-  currentUserType: UserType = UserType.Admin;
-  currentUsername: string = "testUser";
+  currentUserType = new BehaviorSubject<UserType>(UserType.Unauthenticated);
+  currentUsername = new BehaviorSubject<string>("");
   
 
   login(userName: string, password: string): boolean{
-    console.log(userName, password)
-    console.log(this.users)
     const existingUser = this.users.find(u => u.username == userName && u.password == password);
-    console.log(existingUser)
     if(!existingUser){
       return false;
     }
 
-    this.currentUsername = existingUser.username;
-    this.currentUserType = existingUser.userType;
+    this.currentUsername.next(existingUser.username);
+    this.currentUserType.next(existingUser.userType);
 
     return true;
+  }
+
+  static isAuthenticated(currentUserType: UserType): boolean{
+    return currentUserType != UserType.Unauthenticated;
   }
 
 

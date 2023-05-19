@@ -14,4 +14,5 @@ export enum UserType{
   Admin,
   Doctor,
   Patient,
+  Unauthenticated
 }
