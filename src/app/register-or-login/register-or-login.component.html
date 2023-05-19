@@ -5,5 +5,5 @@
 
 <div *ngIf="isRegister">
     <app-register-patient (toggleRegister)="toggleRegister($event)"></app-register-patient>
-    <p><a (click)="toggleRegister(true)" class="link-opacity-100" href="#">Already have an account? Login instead.</a></p>
+    <p><a (click)="toggleRegister(false)" class="link-opacity-100" href="#">Already have an account? Login instead.</a></p>
 </div>
