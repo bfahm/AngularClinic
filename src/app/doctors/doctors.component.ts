@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ADD_DOCTORS_ROUTE } from '../app-routing.module';
 import { DoctorsService } from './doctors.service';
-import { Doctor } from './doctor.model';
+import { Doctor } from '../models/doctor.model';
 
 @Component({
   selector: 'app-doctors',

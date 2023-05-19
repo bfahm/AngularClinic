@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CLINICS_ROUTE } from 'src/app/app-routing.module';
-import { Clinic } from '../clinic.model';
+import { Clinic } from '../../models/clinic.model';
 import { ClinicsService } from '../clinics.service';
 
 @Component({

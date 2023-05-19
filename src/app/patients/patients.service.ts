@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Patient } from './patient.model';
+import { Patient } from '../models/patient.model';
 
 export const demoPatient = new Patient(1, 'Jack', 'jack', 'Test@123');
 

@@ -1,5 +1,5 @@
 import { Inject, Injectable, forwardRef } from '@angular/core';
-import { Doctor } from './doctor.model';
+import { Doctor } from '../models/doctor.model';
 import { ClinicsService } from '../clinics/clinics.service';
 
 // Demo data for testing

@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCTORS_ROUTE } from 'src/app/app-routing.module';
-import { Doctor } from '../doctor.model';
+import { Doctor } from '../../models/doctor.model';
 import { DoctorsService } from '../doctors.service';
 import { ClinicsService } from 'src/app/clinics/clinics.service';
-import { Clinic } from 'src/app/clinics/clinic.model';
+import { Clinic } from 'src/app/models/clinic.model';
 
 @Component({
   selector: 'app-add-doctor',

@@ -1,4 +1,4 @@
-import { Clinic } from "../clinics/clinic.model";
+import { Clinic } from "./clinic.model";
 
 export class Doctor {
   id: number;
