@@ -1,1 +1,45 @@
-<p>doctor-view works!</p>
+<h5>Doctor Details</h5>
+<table id="doctors-table">
+    <tbody>
+      <tr>
+        <td>Id</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>{{ doctor?.id }}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>{{ doctor?.name }}</td>
+      </tr>
+    </tbody>
+</table>
+
+<br/>
+<br/>
+
+<h5>Appointments</h5>
+  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
+    <div class="col mb-5" *ngFor="let appointment of appointments">
+            <div class="card h-100">
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <h5 class="fw-bolder">{{ appointment.patient.name }}</h5>
+                    </div>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                      <h6>Date</h6>
+                      <ul class="list-group">
+                        <li class="list-group-item" >{{ appointment.date }}</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
