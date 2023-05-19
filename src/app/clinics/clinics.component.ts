@@ -7,7 +7,6 @@ import { ClinicsService } from './clinics.service';
 @Component({
   selector: 'app-clinics',
   templateUrl: './clinics.component.html',
-  styleUrls: ['./clinics.component.css']
 })
 export class ClinicsComponent implements OnInit {
   clinics: Clinic[] = [];

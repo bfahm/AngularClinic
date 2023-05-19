@@ -7,7 +7,6 @@ import { Doctor } from './doctor.model';
 @Component({
   selector: 'app-doctors',
   templateUrl: './doctors.component.html',
-  styleUrls: ['./doctors.component.css']
 })
 export class DoctorsComponent implements OnInit {
   doctors: Doctor[] = [];
