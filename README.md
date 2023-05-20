@@ -1,27 +1,59 @@
-# AngularClinic
+# Angular Clinic!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+A simple side project with Angular and Bootstrap.
+1. The system has three types of users
+	- Patient
+	- Doctor
+	- Admin
+2. The **Admin** can add **Clinics** and **Doctors** and access all of the system
+3. **Doctors** can be added by the **Admin**
+4. **Patients** have a public registration page and accounts to make an appointment at a **Clinic** or a **Doctor**.
 
-## Development server
+### Installation 💻
+Run
+```
+npm i
+ng serve
+```
+Navigate to
+```
+http://localhost:4200
+```
+### Test Accounts 👤
+1. Admin
+	- Username: `admin`
+	- Password `admin`
+2. Doctor
+ 	- Username: `lee`
+	- Password `Test@123`
+3. Patient
+ 	- Username: `jo`
+	- Password `Test@123`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Leftovers ⚠️
+- The app needs route guards.
+- The app needs to be connected to a backend service to provide the data, currently the data is persisted in memory.
+- The app needs to store login state in cookies or browser storage, currently state is refreshed upon page reload.
 
-## Code scaffolding
+### Screenshots 📸
+![enter image description here](https://i.imgur.com/oTys7LM.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![enter image description here](https://i.imgur.com/N5gBhat.png)
 
-## Build
+![enter image description here](https://i.imgur.com/DVjSVR6.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![enter image description here](https://i.imgur.com/O8DES3c.png)
 
-## Running unit tests
+![enter image description here](https://i.imgur.com/tg3QdDr.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![enter image description here](https://i.imgur.com/Ry2C0Wz.png)
 
-## Running end-to-end tests
+![enter image description here](https://i.imgur.com/dkrrPle.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![enter image description here](https://i.imgur.com/qCIeppq.png)
 
-## Further help
+![enter image description here](https://i.imgur.com/MZAuA3v.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![enter image description here](https://i.imgur.com/CfNYJxZ.png)
+
+![enter image description here](https://i.imgur.com/xNiJjXD.png)
